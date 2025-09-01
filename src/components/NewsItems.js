@@ -1,5 +1,6 @@
 
 import React, { Component } from 'react'
+import img from "../assets/img.jpeg"
 
 export default class NewsItems extends Component {
 
@@ -12,7 +13,7 @@ export default class NewsItems extends Component {
             <div>
                 <div className="card my-3" >
                     <a className='p-2' href={newsurl} target='_blank' rel="noreferrer">
-                        <img src={imgurl === null ? "https://a4.espncdn.com/combiner/i?img=%2Fi%2Fcricket%2Fcricinfo%2F1099495_800x450.jpg" : imgurl} className="card-img-top" alt="..." />
+                        <img src={imgurl ? imgurl:  img} className="card-img-top" alt="News" />
                     </a>
                     <div className="card-body">
                         <h5 className="card-title">{title} <span className="position-absolute top-0 start-100 translate-middle badge z-1 rounded-pill bg-danger">
